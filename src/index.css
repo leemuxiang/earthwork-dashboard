@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 10px 30px -10px rgba(22, 119, 255, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+    color: #1F2329;
+  }
+
+  .glass-card-hover {
+    transition: all 0.25s ease;
+  }
+  .glass-card-hover:hover {
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 16px 36px -10px rgba(22, 119, 255, 0.16), 0 6px 12px -2px rgba(0, 0, 0, 0.05);
+    border-color: rgba(133, 181, 255, 0.8);
+    transform: translateY(-2px);
+  }
+
+  .glass-dark-badge {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .glow-blue-text {
+    text-shadow: 0 0 12px rgba(22, 119, 255, 0.4);
+  }
+
+  .glow-cyan-border {
+    box-shadow: 0 0 15px rgba(22, 119, 255, 0.25), inset 0 0 15px rgba(22, 119, 255, 0.1);
+  }
+
+  .tech-grid-pattern {
+    background-image: radial-gradient(rgba(22, 119, 255, 0.12) 1px, transparent 1px),
+                      radial-gradient(rgba(22, 119, 255, 0.06) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-position: 0 0, 12px 12px;
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.03);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+.animate-spin-reverse {
+  animation: spinReverse 25s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Custom scrollbars inside device mockup */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(22, 119, 255, 0.3);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(22, 119, 255, 0.6);
+}

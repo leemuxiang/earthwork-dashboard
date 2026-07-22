@@ -1,0 +1,6 @@
+{
+  "name": "土方数智化管控平台",
+  "description": "基于 Glassmorphism 毛玻璃风格的土方工程数智化大屏管控平台 UI",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
